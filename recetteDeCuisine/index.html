@@ -26,7 +26,11 @@
                 <p>
                     Nommées aussi <strong>Pasta alla Carbonara</strong> en italien (littéralement, “pâtes à la charbonnière”),
                     les pâtes à la carbonara sont un plat traditionnel originaire d’Italie. <br/>
-                    Zoom sur tous les secrets d’une recette simple, authentique et savoureuse, devenue un classique à réaliser et à déguster chez soi…
+                    Zoom sur tous les secrets d’une recette simple, authentique et savoureuse, devenue un classique à réaliser et à déguster chez soi…<br>
+                    Il existe plusieurs récits relatant l’origine de ces pâtes. Selon l’un des plus célèbres, leurs créateurs seraient des charbonniers (les “carbonari”)
+                    qui fabriquaient autrefois du charbon de bois dans les forêts des Apennins en Italie. Ayant besoin d’un plat nourrissant leur permettant d’accomplir leur
+                    tâche malgré le froid hivernal, ces pauvres travailleurs inventèrent un repas à l’aide des quelques aliments qui leur restaient sous la main : des pâtes, 
+                    du porc salé, du fromage et des œufs.
                 </p>
             </section>
 
@@ -80,7 +84,7 @@
             </section>
 
             <footer class="largeur">
-                <a href="https://www.ilristorante.fr/2018/03/11/la-veritable-recette-traditionnelle-des-pates-a-la-carbonara/" target="_blank">Retrouvez ici la recette originale</a>
+                <a href="https://www.ilristorante.fr/2018/03/11/la-veritable-recette-traditionnelle-des-pates-a-la-carbonara/" target="_blank" id="lienOriginal">Retrouvez ici la recette originale</a>
             </footer>
         </main>
 
@@ -96,13 +100,13 @@
 
                     <span class="elemForm">
                         <label for="nom">Votre Nom : </label>
-                        <input type="text" id="nom" />
+                        <input type="text" id="nom" class="inputTexte"/>
                     </span>
 
 
                     <span class="elemForm">
                        <label for="adrMail">Votre mail : </label>
-                        <input type="email" id="adrMail" placeholder="@"/>
+                        <input type="email" id="adrMail" placeholder="@" class="inputTexte"/>
                     </span>
 
 
@@ -117,7 +121,7 @@
                     <span class="elemForm">
                         <p>Nous autorisez-vous à vous recontacter ?</p>
                     </span>
-                    <span class="elemForm">
+                    <span class="elemForm" id="boutonsChoix">
                         <span>
                             <label for="checkAccepte">J'accepte</label>
                             <input type="radio" name="choix" id="checkAccepte" checked value="accepte">
