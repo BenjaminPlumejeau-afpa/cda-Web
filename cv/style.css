@@ -19,48 +19,39 @@ main{
 
 #mainHeader{
     grid-area: mh;
-    background: purple;
 }
 
 #section1{
     grid-area: s1;
-    background: greenyellow;
 }
 
 #section2{
     grid-area: s2;
-    background: blue;
 }
 
 #section3{
     grid-area: s3;
-    background: green;
 }
 
 #section4{
     grid-area: s4;
-    background: red;
 }
 
 #section5{
     grid-area: s5;
-    background: cyan;
 }
 
 #section6{
     grid-area: s6;
-    background: orange;
 }
 
 #mainFooter{
     grid-area: mf;
-    background: yellowgreen;
 }
 
 
 #bodyFooter{
     grid-area: bf;
-    background: purple;
 }
 
 h1, h2{
@@ -77,8 +68,29 @@ h3{
     font-style: italic;
 }
 
+section{
+    margin: 5px 5px;
+}
+
 p{
     margin: 5px;
+}
+
+ul{
+    margin-bottom: 30px;
+}
+
+li{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+table{
+    margin-top: 10%;
+}
+
+tr{
+    padding: 10% 30%;
 }
 
 a{
@@ -91,43 +103,48 @@ a:hover{
     font-weight: bold;
 }
 
-#videoExplic{
+.fichierMedia{
     width: 75%;
 }
 
 hr{
-    margin: 5% 10% 0;
+    margin: 1% 10% 0;
     color: grey;
 }
 
-#bodyfooter{
+#bodyFooter{
     margin: 0;
     padding: 10px 5px;
-    font-size: 10px;
+    font-size: 12px;
+    font-style: italic;
 }
 
 @media screen and (min-width: 576px){
    main{
         grid-template-areas:
-            "mh mh mh s2"
-            "s1 s1 s1 s2"
-            "s3 s3 s3 s5"
-            "s3 s3 s3 s5"
-            "s4 s4 s4 s6"
-            "s4 s4 s4 s6"
-            "mf mf mf mf";
+            "mh s2"
+            "s1 s2"
+            "s3 s5"
+            "s3 s5"
+            "s4 s6"
+            "s4 s6"
+            "mf mf";
+
+        grid-template-columns: auto 40%;
    } 
 }
 
 @media screen and (min-width: 768px){
    main{
         grid-template-areas:
-            "mh mh mh mh mh s2"
-            "s1 s1 s1 s1 s1 s2"
-            "s3 s3 s3 s3 s3 s5"
-            "s3 s3 s3 s3 s3 s5"
-            "s4 s4 s4 s4 s4 s6"
-            "s4 s4 s4 s4 s4 s6"
-            "mf mf mf mf mf mf";
+            "mh  s2"
+            "s1 s2"
+            "s3 s5"
+            "s3 s5"
+            "s4 s6"
+            "s4 s6"
+            "mf mf";
+
+        grid-template-columns: auto 30%;
    } 
 }
