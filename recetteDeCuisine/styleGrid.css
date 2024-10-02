@@ -17,6 +17,7 @@ main{
 section{
     margin: 10px 15px;
     padding: 10px 10px;
+    width: 100%;
     justify-content: flex-start;
     border-style: solid;
     border-radius: 10px;
@@ -70,27 +71,33 @@ fieldset{
     max-width: 350px;
 }
 
+a{
+    text-shadow: 1px 1px 1px;
+}
+
 a:hover{
-    color: cyan;
+    text-shadow: 2px 2px 3px;
 }
 
 .largeur{
     width: 100%;
 }
 
-.coteAcote{
-    min-width: 300px;
-    max-width: 40%;
-}
-
 .liste{
     margin-top: 1px;
 }
+
 .elemForm{
     display: flex;
-    justify-content: space-evenly;
-    margin-left: 10px;
+    justify-content: flex-start;
+    flex-grow: 2;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 5px;
+}
+
+.inputTexte{
+    flex: 2;
 }
 
 #imagePlat{
@@ -98,12 +105,13 @@ a:hover{
     max-width: 450px;
 }
 
-#description{
-    text-align: center;
-}
-
 #nutri{
     display: block;
+}
+
+#lienOriginal{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 #basPage{
@@ -130,6 +138,11 @@ a:hover{
     justify-content: center;
 }
 
+#boutonsChoix{
+    margin-top: 0;
+    justify-content: space-evenly;
+}
+
 #btEnvoyer{
     width: 100px;
     height: 25px;
@@ -139,8 +152,17 @@ a:hover{
     background-color: greenyellow;
 }
 
-@media (min-width : 900px){
+@media (min-width : 768px){
     section{
         max-width :1000px;
+    }
+
+    .coteAcote{
+        flex: 300px;
+    }
+
+    #description{
+        display: block;
+        max-width: 800px;
     }
 }
