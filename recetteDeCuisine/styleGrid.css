@@ -3,32 +3,50 @@ header{
     text-align: center;
 }
 
-footer{
+body footer{
+    display: flex;
     margin: 5px;
     text-align: center;
 }
 
 main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-areas: 
+            "sd"
+            "si"
+            "se"
+            "ps";
+    height: 100%;
+}
+
+#description{
+    grid-area: sd; /*Section Description*/
+}
+
+#ingredients{
+    grid-area: si; /*Section Ingredients*/
+}
+
+#etapes{
+    grid-area: se; /*Section Etapes*/
 }
 
 section{
     margin: 10px 15px;
     padding: 10px 10px;
-    width: 100%;
-    justify-content: flex-start;
+    min-width: 300px;
     border-style: solid;
     border-radius: 10px;
     border-color: bisque;
 
     background-color: rgb(255, 241, 221);
 }
-
-main footer{
+#piedSection{
+    margin: 5px;
+    text-align: center;
     font-style: italic;
     justify-content: center;
+    grid-area: ps; /*Pied Section*/
 }
 
 h1{
@@ -79,10 +97,6 @@ a:hover{
     text-shadow: 2px 2px 3px;
 }
 
-.largeur{
-    width: 100%;
-}
-
 .liste{
     margin-top: 1px;
 }
@@ -107,6 +121,7 @@ a:hover{
 
 #nutri{
     display: block;
+    box-align: center;
 }
 
 #lienOriginal{
@@ -152,17 +167,12 @@ a:hover{
     background-color: greenyellow;
 }
 
-@media (min-width : 768px){
-    section{
-        max-width :1000px;
-    }
-
-    .coteAcote{
-        flex: 300px;
-    }
-
-    #description{
-        display: block;
-        max-width: 800px;
+@media screen and (min-width : 768px){
+    main{
+        grid-template-areas:
+            "sd sd"
+            "si se"
+            "ps ps"
+            ;
     }
 }
