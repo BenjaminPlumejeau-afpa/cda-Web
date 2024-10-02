@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--- Feuille de Style sans Grid -->
+        <link rel="stylesheet" href="style.css">
+
+        <!--- Feuille de Style utilisant une Grid 
+        <link rel="stylesheet" href="styleGrid.css">
+        -->
+
+        <title>Recette Pâtes carbonara</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Recette des pâtes Carbonara</h1>
+            <img src="img/assiette_cabonara.jpg" alt="Photo d'une assiette de pâtes à la carbonara" id="imagePlat"/>
+        </header>
+
+        <main>
+            <section id="description" class="largeur">
+                <h2>Description</h2>
+                <p>
+                    Nommées aussi <strong>Pasta alla Carbonara</strong> en italien (littéralement, “pâtes à la charbonnière”),
+                    les pâtes à la carbonara sont un plat traditionnel originaire d’Italie. <br/>
+                    Zoom sur tous les secrets d’une recette simple, authentique et savoureuse, devenue un classique à réaliser et à déguster chez soi…
+                </p>
+            </section>
+
+            <section id="ingredients" class="coteAcote">
+                <h2>Liste des ingrédients</h2>
+                <ul class="liste">
+                    <li>400 g de pâtes</li>
+                    <li>4 œufs</li>
+                    <li>100 g de parmesan</li>
+                    <li>250 g de pancetta</li>
+                    <li>Huile d’olive</li>
+                    <li>Sel et poivre</li>
+                </ul>
+
+                <h3>Estimation de l'apport calorique journalier des ingrédients (Pour une personne) :</h3>
+                <table id="nutri">
+                    <thead>
+                        <tr>
+                            <td>Pâtes</td>
+                            <td>Oeufs</td>
+                            <td>Parmesan</td>
+                            <td>Pancetta</td>
+                            <td>Huile d'olive</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>280 kCal</td>
+                            <td>320 kCal</td>
+                            <td>110 kCal</td>
+                            <td>190 kCal</td>
+                            <td>100 kCal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="etapes" class="coteAcote">
+                <h2>Préparation</h2>
+                <ol class="liste">
+                    <li>Cassez les 4 œufs dans un récipient</li>
+                    <li>Râpez ensuite le parmesan directement sur les œufs contenus dans le récipient. Assaisonnez ensuite le tout à l’aide de quelques pincées de sel et de poivre.</li>
+                    <li>Mélangez et mettez la préparation de côté.</li>
+                    <li>Coupez ensuite la pancetta en fines lamelles. Munissez-vous d’une poêle et ajoutez-y un peu d’huile d’olive.</li>
+                    <li>Mettez la poêle sur le feu. Lorsque celle-ci est assez chaude, versez-y les lamelles de pancetta. Laissez cuire à feu doux.</li>
+                    <li>Faites à présent cuire vos pâtes dans une casserole et une fois cuites le verser dans la poêle contenant la pancetta.</li>
+                    <li>Incorporez la préparation à base d’œufs et de parmesan réalisée au début.</li>
+                    <li>Mélangez le tout délicatement à l’aide d’une grande cuillère, ou d’une pince à spaghettis.</li>
+                    <li>Pour finir, dressez votre plat et saupoudrez-le de quelques pincées supplémentaires de parmesan.</li>
+                </ol>
+            </section>
+
+            <footer class="largeur">
+                <a href="https://www.ilristorante.fr/2018/03/11/la-veritable-recette-traditionnelle-des-pates-a-la-carbonara/" target="_blank">Retrouvez ici la recette originale</a>
+            </footer>
+        </main>
+
+        <footer id="basPage">
+            <form action="" id="formulaire">
+                <fieldset>
+                    <legend id="legendForm">Laissez nous un commentaire !</legend>
+
+                    <span class="elemForm">
+                        <label for="dateCom">Date de la préparation : </label>
+                        <input type="date" id="dateCom"/>
+                    </span>
+
+                    <span class="elemForm">
+                        <label for="nom">Votre Nom : </label>
+                        <input type="text" id="nom" />
+                    </span>
+
+
+                    <span class="elemForm">
+                       <label for="adrMail">Votre mail : </label>
+                        <input type="email" id="adrMail" placeholder="@"/>
+                    </span>
+
+
+                    <span class="elemForm">
+                    <label for="texteCom">Votre commentaire : </label><br>
+                    </span>
+                    <span class="elemForm">
+                    <textarea name="commentaire" id="texteCom" rows="5"></textarea>
+                    </span>
+
+
+                    <span class="elemForm">
+                        <p>Nous autorisez-vous à vous recontacter ?</p>
+                    </span>
+                    <span class="elemForm">
+                        <span>
+                            <label for="checkAccepte">J'accepte</label>
+                            <input type="radio" name="choix" id="checkAccepte" checked value="accepte">
+                        </span>
+                        <span>
+                            <label for="checkRefuse">Je refuse</label>
+                            <input type="radio" name="choix" id="checkRefuse" value="refuse">
+                        </span> 
+                    </span>
+
+                </fieldset>
+                <button type="submit" id="btEnvoyer">Envoyer</button>
+            </form>
+        </footer>
+    </body>
+</html>

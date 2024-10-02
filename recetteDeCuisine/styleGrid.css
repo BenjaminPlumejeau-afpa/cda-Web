@@ -1,0 +1,146 @@
+header{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer{
+    margin: 5px;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section{
+    margin: 10px 15px;
+    padding: 10px 10px;
+    justify-content: flex-start;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: bisque;
+
+    background-color: rgb(255, 241, 221);
+}
+
+main footer{
+    font-style: italic;
+    justify-content: center;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-style: italic;
+    text-shadow: 2px 2px grey ;
+}
+
+h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+    padding-bottom: 10px;
+}
+
+td{
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    background-color: white;
+}
+
+thead td{
+    background-color: lightgreen;
+}
+
+hr{
+    margin: 20px 5px;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+    max-width: 350px;
+}
+
+a:hover{
+    color: cyan;
+}
+
+.largeur{
+    width: 100%;
+}
+
+.coteAcote{
+    min-width: 300px;
+    max-width: 40%;
+}
+
+.liste{
+    margin-top: 1px;
+}
+.elemForm{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+#imagePlat{
+    width: 75%;
+    max-width: 450px;
+}
+
+#description{
+    text-align: center;
+}
+
+#nutri{
+    display: block;
+}
+
+#basPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    padding: 10px;
+    background-color: lavender;
+}
+
+#formulaire{
+    justify-content: center;
+}
+
+#legendForm{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+#texteCom{
+    flex: 300px;
+    justify-content: center;
+}
+
+#btEnvoyer{
+    width: 100px;
+    height: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+    box-shadow: 2px 2px;
+    background-color: greenyellow;
+}
+
+@media (min-width : 900px){
+    section{
+        max-width :1000px;
+    }
+}
