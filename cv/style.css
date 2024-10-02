@@ -1,0 +1,133 @@
+html, body{
+    height: 100vh;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+    display: grid;
+    grid-template-areas:
+        "mh"
+        "s1"
+        "s2"
+        "s3"
+        "s4"
+        "s5"
+        "s6"
+        "mf";
+}
+
+#mainHeader{
+    grid-area: mh;
+    background: purple;
+}
+
+#section1{
+    grid-area: s1;
+    background: greenyellow;
+}
+
+#section2{
+    grid-area: s2;
+    background: blue;
+}
+
+#section3{
+    grid-area: s3;
+    background: green;
+}
+
+#section4{
+    grid-area: s4;
+    background: red;
+}
+
+#section5{
+    grid-area: s5;
+    background: cyan;
+}
+
+#section6{
+    grid-area: s6;
+    background: orange;
+}
+
+#mainFooter{
+    grid-area: mf;
+    background: yellowgreen;
+}
+
+
+#bodyFooter{
+    grid-area: bf;
+    background: purple;
+}
+
+h1, h2{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+h3{
+    margin-top: 0;
+    margin-left: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+p{
+    margin: 5px;
+}
+
+a{
+    color: blue;
+    transition: color 0.5s;
+}
+
+a:hover{
+    color: green;
+    font-weight: bold;
+}
+
+#videoExplic{
+    width: 75%;
+}
+
+hr{
+    margin: 5% 10% 0;
+    color: grey;
+}
+
+#bodyfooter{
+    margin: 0;
+    padding: 10px 5px;
+    font-size: 10px;
+}
+
+@media screen and (min-width: 576px){
+   main{
+        grid-template-areas:
+            "mh mh mh s2"
+            "s1 s1 s1 s2"
+            "s3 s3 s3 s5"
+            "s3 s3 s3 s5"
+            "s4 s4 s4 s6"
+            "s4 s4 s4 s6"
+            "mf mf mf mf";
+   } 
+}
+
+@media screen and (min-width: 768px){
+   main{
+        grid-template-areas:
+            "mh mh mh mh mh s2"
+            "s1 s1 s1 s1 s1 s2"
+            "s3 s3 s3 s3 s3 s5"
+            "s3 s3 s3 s3 s3 s5"
+            "s4 s4 s4 s4 s4 s6"
+            "s4 s4 s4 s4 s4 s6"
+            "mf mf mf mf mf mf";
+   } 
+}
