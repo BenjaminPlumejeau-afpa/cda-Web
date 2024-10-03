@@ -4,6 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+
+        <!-- GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
         <title>mon CV</title>
     </head>
 
@@ -19,11 +26,10 @@
 
             <section id="section2">
                 <h3>Coordonnées</h3>
-                <ul>
-                    <li>Adresse</li>
-                    <li>Ville</li>
-                    <li>Téléphone</li>
-                    <li>Mail</li>
+                <ul class="listeCoordonnees">
+                    <li><span class="adresse">000 rue de la République<br>54000 NANCY</span></li>
+                    <li><span class="numTel">01.02.03.04.05</span></li>
+                    <li><a href="mailto:benjamin.plumejeau@afpa-dev-pompey.fr"><span class="lienMail">benjamin.plumejeau@afpa-dev-pompey.fr</span></a></li>
                 </ul>
             </section>
 
@@ -42,12 +48,18 @@
                             <dd>Conception et implémentation de plusieurs élément d'un logiciel de tableau de bord d'entreprise</dd>
                         </dl>
                     </li>
+                    <li>
+                        <dl>
+                            <dt>2015,2016,2017 : Auxiliaire de vacances</dt>
+                            <dd>Archivage et numérisationd de document</dd>
+                        </dl>
+                    </li>
                 </ul>
             </section>
 
             <section id="section4">
                 <h3>Formations et Diplômes</h3>
-                <table>
+                <table id="tabFormations">
                     <tr>
                         <th>Période</th>
                         <th>Intitulé</th>
@@ -57,6 +69,11 @@
                         <td>2024-2025</td>
                         <td><a href="https://www.afpa.fr/formation-qualifiante/concepteur-developpeur-informatique" target="_blank">Concepteur Développeur d'Applications</a></td>
                         <td>AFPA Pompey</td>
+                    </tr>
+                    <tr>
+                        <td>2016-2018</td>
+                        <td>Niveau Licence MIASHS</td>
+                        <td>UFR math-Info Nancy</td>
                     </tr>
                     <tr>
                         <td>2016</td>
@@ -84,8 +101,14 @@
                 <h3>Loisirs et Passions</h3>
                 <ul>
                     <li>
-                        <h4>Jeux Vidéos</h4>
-                        <p>Genres variés</p>
+                        <article>
+                            <header>
+                                <h4>Jeux Vidéos</h4>
+                            </header>
+                            <section>
+                                <p>Genres variés</p>
+                            </section>
+                        </article>
                     </li>
                     <li>
                         <article>
@@ -114,6 +137,16 @@
                             </footer>
                         </article>
                     </li>
+                </ul>
+            </section>
+
+            <section id="section7">
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Gestion d'une base de donnée</li>
+                    <li>Concevoir et implémenter une application</li>
+                    <li>Organiser une tournée</li>
+                    <li>Gestion d'un stock</li>
                 </ul>
             </section>
 
