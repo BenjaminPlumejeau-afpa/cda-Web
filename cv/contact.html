@@ -3,6 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
         <title>Me contacter</title>
     </head>
 
@@ -16,36 +23,50 @@
                 <fieldset>
                     <legend>Vos Coordonnées</legend>
 
-                    <label for="nom">Votre Nom : </label>
-                    <input type="text" id="nom" placeholder="Nom">
+                    <span class="champForm">
+                        <label for="nom">Votre Nom : </label>
+                        <input type="text" id="nom" placeholder="Nom" class="inputTexte">
+                    </span>
 
-                    <label for="entreprise">Nom de votre Entreprise : </label>
-                    <input type="text" id="entreprise" placeholder="Entreprise">
+                    <span class="champForm">
+                        <label for="entreprise">Votre Entreprise : </label>
+                        <input type="text" id="entreprise" placeholder="Entreprise" class="inputTexte">
+                    </span>
 
-                    <label for="mail">Votre adresse mail : </label>
-                    <input type="email" id="mail" placeholder="@">
+                    <span class="champForm">
+                        <label for="mail">Votre adresse mail : </label>
+                        <input type="email" id="mail" placeholder="@" class="inputTexte">
+                    </span>
 
-                    <label for="telephone">Votre téléphone : </label>
-                    <input type="tel" id="telephone" placeholder="Téléphone">
+                    <span class="champForm">
+                        <label for="telephone">Votre téléphone : </label>
+                        <input type="tel" id="telephone" placeholder="Téléphone" class="inputTexte">
+                    </span>
 
-                    <input type="reset" value="Tout Effacer">
+                    <span class="champForm">
+                        <input type="reset" value="Tout Effacer">
+                    </span>
                 </fieldset>
 
                 <fieldset>
                     <legend>Mon Profil</legend>
                     
-                    <p>Mon profil vous a-t-il intéressé ?</p>
-                    <label for="profilOui">Oui</label>
-                    <input type="radio" name="profil" id="profilOui">
-                    <label for="profilNon">Non</label>
-                    <input type="radio" name="profil" id="profilNon">
+                    <span class="champForm">
+                        <p>Mon profil vous a-t-il intéressé ?</p>
+                    </span>
+                    <span class="champForm">
+                        <label for="profilOui">Oui</label>
+                        <input type="radio" name="profil" id="profilOui">
+                        <label for="profilNon">Non</label>
+                        <input type="radio" name="profil" id="profilNon">
+                    </span>
                 </fieldset>
 
                 <input type="submit" value="Envoyer">
             </form>
         </main>
 
-        <footer>
+        <footer id="bodyFooter">
             <hr>
             <p>Cette page a été réalisée à des fins d'expérimentation</p>
         </footer>
