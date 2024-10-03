@@ -18,7 +18,7 @@
             <h1>Me contacter</h1>
         </header>
 
-        <main>
+        <main id="pageContact">
             <form action="">
                 <fieldset>
                     <legend>Vos Coordonnées</legend>
@@ -54,7 +54,7 @@
                     <span class="champForm">
                         <p>Mon profil vous a-t-il intéressé ?</p>
                     </span>
-                    <span class="champForm">
+                    <span id="radioOuiNon">
                         <label for="profilOui">Oui</label>
                         <input type="radio" name="profil" id="profilOui">
                         <label for="profilNon">Non</label>
@@ -62,7 +62,10 @@
                     </span>
                 </fieldset>
 
-                <input type="submit" value="Envoyer">
+                <span class="spanBouttons">
+                    <a href="index.html"><input type="button" value="Retour au CV" class="classBoutton"></a>
+                    <input type="submit" value="Envoyer" class="classBoutton">
+                </span>
             </form>
         </main>
 
