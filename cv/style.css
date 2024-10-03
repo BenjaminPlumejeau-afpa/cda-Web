@@ -1,7 +1,11 @@
 html, body{
     height: 100vh;
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Nunito, sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    background-color: rgb(253, 234, 208);
+    background: linear-gradient(rgb(144, 202, 67), rgb(253, 234, 208) 35%) no-repeat, rgb(253, 234, 208);
 }
 
 main{
@@ -11,6 +15,7 @@ main{
         "s1"
         "s2"
         "s3"
+        "s7"
         "s4"
         "s5"
         "s6"
@@ -45,6 +50,10 @@ main{
     grid-area: s6;
 }
 
+#section7{
+    grid-area: s7;
+}
+
 #mainFooter{
     grid-area: mf;
 }
@@ -56,24 +65,42 @@ main{
 
 h1, h2{
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-weight: bolder;
+    margin-bottom: 2em;
+}
+
+h1{
+    font-size: 2em;
+}
+
+h2{
+    font-size: 1.5em;
 }
 
 h3{
     margin-top: 0;
     margin-left: 5px;
+    font-size: 1.2em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-decoration: underline;
     font-style: italic;
 }
 
+h4{
+    margin-bottom: 0;
+    font-size: 1em;
+}
+
 section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 5px 5px;
 }
 
 p{
-    margin: 5px;
+    margin: 0;
 }
 
 ul{
@@ -85,22 +112,50 @@ li{
     margin-bottom: 10px;
 }
 
-table{
-    margin-top: 10%;
+dt{
+    margin-bottom: 0.1em;
+    font-weight: 600;
 }
 
-tr{
-    padding: 10% 30%;
+dd{
+    font-style: italic;
+}
+
+.listeCoordonnees{
+    list-style-type: none;
+}
+
+.adresse::before{
+    content: "\1F3E0";
+}
+
+.numTel::before{
+    content: "\260E";
+}
+
+.lienMail::before{
+    content: "\2709";
+}
+
+#tabFormations{
+    margin: 2% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+td{
+    padding: 1%0 1% 3%;
 }
 
 a{
     color: blue;
-    transition: color 0.5s;
+    transition: color 0.4s, text-shadow 0.5s;
 }
 
 a:hover{
     color: green;
-    font-weight: bold;
+    text-shadow: 1px 1px 1px;
 }
 
 .fichierMedia{
@@ -124,8 +179,10 @@ hr{
         grid-template-areas:
             "mh s2"
             "s1 s2"
+            "s3 s2"
             "s3 s5"
-            "s3 s5"
+            "s7 s5"
+            "s7 s5"
             "s4 s6"
             "s4 s6"
             "mf mf";
@@ -137,10 +194,12 @@ hr{
 @media screen and (min-width: 768px){
    main{
         grid-template-areas:
-            "mh  s2"
+            "mh s2"
             "s1 s2"
+            "s3 s2"
             "s3 s5"
-            "s3 s5"
+            "s7 s5"
+            "s7 s5"
             "s4 s6"
             "s4 s6"
             "mf mf";
