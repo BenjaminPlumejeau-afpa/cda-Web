@@ -22,18 +22,36 @@ function estPalindrome(chaine) {
 
 // Fonction verifiant si 2 chaines sont des anagrammes
 function sontAnagrammes(chaine1, chaine2) {
-    let anagramme = false;
-    // si les chaines ne font pas la meme taille elles ne peuvent pas être anagrammes
-    if (chaine1.length !== chaine2.length){
-        return false;
-    } else {
 
+    // si les chaines ne font pas la meme taille elles ne peuvent pas être anagrammes
+    if (chaine1.length !== chaine2.length) {
+        return false;
     }
-    return anagramme;
+
+    // on copie les caracteres des chaines dans des tableaux puis on les tris alphabetiquement
+    let tab1 = [];
+    let tab2 = [];
+    for (let i = 0; i < chaine1.length; i++) {
+        tab1.push(chaine1[i]);
+        tab2.push(chaine2[i]);
+    }
+    tab1.sort();
+    tab2.sort();
+
+    // on parcours les tableaux ; s'ils sont identiques les 2 chaines sont annagrammes
+    let anagramme = true;
+    let i = 0;
+    while ((i < tab1.length) && anagramme) {
+        anagramme = (tab1[i] === tab2[i]);
+        i++;
+    }
+
+    return (anagramme);
 }
 
 
-// Appel des fonctions
+//  -- Appel des fonctions --
+
 // Appel de sommePaire
 let n = 7;
 console.log("La somme des nombres paires jusqu'à ", n, " est de ", sommePaire(n));
@@ -47,8 +65,8 @@ if (estPalindrome(chaine)) {
 }
 
 // Appel de sontAnagrammes
-let chaine1 = "coucou"
-let chaine2 = "salut"
+let chaine1 = "icoucou"
+let chaine2 = "oucocui"
 if (sontAnagrammes(chaine1, chaine2)) {
     console.log(chaine1, " et ", chaine2, " sont des anagrammes")
 } else {
