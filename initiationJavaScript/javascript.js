@@ -14,7 +14,7 @@ function sommePaire(n) {
 // Fonction Verifiant si une chaine est un palindrome
 function estPalindrome(chaine) {
     let palindrome = false;
-    for (let i = 0; i < (chaine.length); i++) {
+    for (let i = 0; i < (chaine.length) / 2; i++) {
         palindrome = chaine[i] === chaine[(chaine.length - i - 1)]
     }
     return palindrome;

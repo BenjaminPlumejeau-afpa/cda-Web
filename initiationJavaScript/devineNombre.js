@@ -1,3 +1,5 @@
+// A activer dans la page html - fichier désactivé car trop obnoxious pour tester les autres exercices
+
 // Fonction permettant de trouver le nombre de l'utilisateur
 function devineNombre(min, actuel, max) {
     let reponse = prompt(actuel + ". + (Plus grand), - (Plus petit), = (Trouvé !)");
