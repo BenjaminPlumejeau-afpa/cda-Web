@@ -2,6 +2,9 @@ console.log("Hello World !");
 
 // Fonction calculant la somme des nombres paires de 1 a N
 function sommePaire(n) {
+    if (typeof (n) !== "number") {
+        throw new Error("Erreur de saisie - " + n + " n'est pas un nombre");
+    }
     let somme = 0;
     for (let i = 2; i <= n; i++) {
         if (i % 2 === 0) {
@@ -52,11 +55,18 @@ function sontAnagrammes(chaine1, chaine2) {
 
 //  -- Appel des fonctions --
 
-// Appel de sommePaire
-let n = 7;
-console.log("La somme des nombres paires jusqu'à ", n, " est de ", sommePaire(n));
+// Appel de sommePaire (+ expériementation d'exception)
+console.log(" - SOMME DES NOMBRES PAIRS - ");
+let n = "abc";
+try {
+    console.log("La somme des nombres pairs jusqu'à ", n, " est de ", sommePaire(n));
+} catch (erreur) {
+    console.error(erreur);
+
+}
 
 // Appel de estPalindrome
+console.log(" - PALINDROME - ");
 let chaine = "azereza";
 if (estPalindrome(chaine)) {
     console.log(chaine, " est un palindrome")
@@ -65,6 +75,7 @@ if (estPalindrome(chaine)) {
 }
 
 // Appel de sontAnagrammes
+console.log(" - ANAGRAMMES - ");
 let chaine1 = "icoucou"
 let chaine2 = "oucocui"
 if (sontAnagrammes(chaine1, chaine2)) {
