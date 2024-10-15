@@ -14,30 +14,39 @@
         function ajouterTache() {
             // Créez un nouvel élément <li>
             const nouvelleTache = document.createElement("li");
-            // Ajoutez le texte de l'input comme contenu du <li>
-            const contenuTache = document.createTextNode(inputNouvelleTache.value);
-            nouvelleTache.appendChild(contenuTache);
             // Ajoutez le <li> à la liste
             listeTaches.appendChild(nouvelleTache);
+            // Ajoutez le texte de l'input comme contenu du <li>
+            nouvelleTache.textContent = inputNouvelleTache.value;
             // Videz l'input après l'ajout
             inputNouvelleTache.value = "";
+            // Ajout de l'écoute d'évenement pour la suppression au nouvel élément
+            nouvelleTache.addEventListener("click", supprimerTache);
         }
 
         // 2. Ajoutez un écouteur d'événements au bouton pour appeler ajouterTache()
-        boutonAjouter.addEventListener("click", (event) => { ajouterTache() });
+        boutonAjouter.addEventListener("click", ajouterTache);
 
         // 3. Créez une fonction pour supprimer une tâche lorsqu'on clique dessus
         function supprimerTache(event) {
             // Vérifiez si l'élément cliqué est un <li>
-            // Si oui, supprimez-le de la liste
-            console.log(event.nodeName);
-            if (event.nodeName === "li") {
-                listeTaches.removeChild(event);
+            if (event.target.nodeName === "LI") {
+                // Si oui, supprimez-le de la liste
+                listeTaches.removeChild(event.target);
             }
         }
 
         // 4. Ajoutez un écouteur d'événements à la liste pour gérer la suppression
-        listeTaches.children.addEventListener("click", (event)=>{supprimerTache()});
+        const elemListe = document.querySelectorAll("li");
+        // on ajoute l'écouteur à tous les éléments déja dans la page ; pour ceux créés après il est ajouté à leur création par ajouterTache()
+        elemListe.forEach(element => {
+            element.addEventListener("click", supprimerTache);
+        });
+
+        // 4. alternatif : on applique l'écouteur sur le parent des li; quand on clique sur les li l'évenement "bubble" vers le parent -> c'est la qu'on le rattrape
+        // le fait que l'ecouteur soit un niveau du parent nécéssite de tester le nodeName dans la fonction
+        // avantage : ne nécéssite pas de devoir ajouter l'écouteur à chaque élément ET à chaque ajout
+        listeTaches.addEventListener("click", supprimerTache);
     </script>
 </head>
 
