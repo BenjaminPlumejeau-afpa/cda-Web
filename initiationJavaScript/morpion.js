@@ -27,8 +27,27 @@ function remplirCase(joueur, grille) {
     return grille;
 }
 
-// fonction vérifiant si le joueur à gagné
-function gagner(joueur, grille){}
+// fonction vérifiant si le joueur à gagné 
+function gagner(joueur, grille) {
+    // on test d'abord les diagonales
+    if (((grille[0][0] === joueur.symbole) && (grille[1][1] === joueur.symbole) && (grille[2][2] === joueur.symbole))
+        ||
+        ((grille[0][2] === joueur.symbole) && (grille[1][1] === joueur.symbole) && (grille[2][0] === joueur.symbole))) {
+        return true;
+    } else {
+        // test des lignes et colonnes
+        for (let i = 0; i < 3; i++) {
+            if (((grille[i][0] === joueur.symbole) && (grille[i][1] === joueur.symbole) && (grille[i][2] === joueur.symbole))
+                ||
+                ((grille[0][i] === joueur.symbole) && (grille[1][i] === joueur.symbole) && (grille[2][i] === joueur.symbole))) {
+                return true;
+            }
+        }
+    }
+
+    // si aucun des tests n'est positifs personne n'a gagné
+    return false;
+}
 
 
 //  - Programme Principal -   //
@@ -49,10 +68,18 @@ let j2 = { nom: "Joueur 2", symbole: "o" };
 
 // Tant que la partie n'est pas finie continuer vaut true
 let continuer = true;
-//while (continuer) {
+let tour = 1;
+while (continuer) {
+    let joueur = {};
+    if (tour % 2 === 0) {
+        joueur = j2;
+    } else {
+        joueur = j1;
+    }
 
-grille = remplirCase(j1, grille);
-
-grille = remplirCase(j2, grille);
-
-//}
+    grille = remplirCase(joueur, grille);
+    if (gagner(joueur, grille)) {
+        console.log(joueur.nom + " à gagné !");
+        continuer = false;
+    }
+}
