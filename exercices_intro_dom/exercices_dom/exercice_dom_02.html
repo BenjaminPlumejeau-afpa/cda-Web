@@ -2,19 +2,24 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercice : Modification du contenu et des attributs</title>
-  <script type="module">
-    // Complétez le code JavaScript ci-dessous
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice : Modification du contenu et des attributs</title>
+    <style>
+        .highlight {
+            color: darkorchid;
+        }
+    </style>
+    <script type="module">
+        // Complétez le code JavaScript ci-dessous
 
-    // 1. Modifiez le texte du titre
-    const titre = document.getElementById("titre");
-    titre.textContent += " => maintenant modifié";
+        // 1. Modifiez le texte du titre
+        const titre = document.getElementById("titre");
+        titre.textContent += " => maintenant modifié";
 
-    // 2. Ajoutez du contenu HTML au paragraphe
-    const paragraphe = document.getElementById("paragraphe");
-    paragraphe.innerHTML=`
+        // 2. Ajoutez du contenu HTML au paragraphe
+        const paragraphe = document.getElementById("paragraphe");
+        paragraphe.innerHTML = `
     <h2>Liste random</h2>
     <ul>
       <li>élément 1</li>
@@ -24,29 +29,30 @@
     <hr>
     `;
 
-    // 3. Changez la source de l'image
-    const image = document.getElementById("image");
-    image.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Firefox_brand_logo%2C_2019.svg/120px-Firefox_brand_logo%2C_2019.svg.png");
-    image.setAttribute("alt", "image modifiée - Texte Google");
+        // 3. Changez la source de l'image
+        const image = document.getElementById("image");
+        image.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Firefox_brand_logo%2C_2019.svg/120px-Firefox_brand_logo%2C_2019.svg.png");
+        image.setAttribute("alt", "image modifiée - Texte Google");
 
-    // 4. Ajoutez un attribut "disabled" au bouton
-    const bouton = document.getElementById("bouton");
-    //bouton.setAttribute("disabled", "")
+        // 4. Ajoutez un attribut "disabled" au bouton
+        const bouton = document.getElementById("bouton");
+        //bouton.setAttribute("disabled", "")
 
-    // 5. Ajoutez la classe "highlight" au paragraphe
-    paragraphe.setAttribute("class", "highlight");
+        // 5. Ajoutez la classe "highlight" au paragraphe
+        paragraphe.classList.add("highlight");
 
-    // Bonus : Créez une fonction qui alterne la classe "highlight" sur le paragraphe lors du clic sur le bouton
-    function bascule(element){element.classList.toggle;}
-    bouton.addEventListener("click",bascule(paragraphe));
-  </script>
+        // Bonus : Créez une fonction qui alterne la classe "highlight" sur le paragraphe lors du clic sur le bouton
+        bouton.addEventListener("click", (event) => {
+            paragraphe.classList.toggle("highlight");
+        });
+    </script>
 </head>
 
 <body>
-  <h1 id="titre">Titre original</h1>
-  <p id="paragraphe">Contenu du paragraphe</p>
-  <img id="image" src="https://via.placeholder.com/150" alt="Image placeholder">
-  <button id="bouton">Cliquez-moi</button>
+    <h1 id="titre">Titre original</h1>
+    <p id="paragraphe">Contenu du paragraphe</p>
+    <img id="image" src="https://via.placeholder.com/150" alt="Image placeholder">
+    <button id="bouton">Cliquez-moi</button>
 
 </body>
 
